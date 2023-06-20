@@ -1,0 +1,45 @@
+main{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+#searchForm{
+    display:flex;
+ 
+    /* flex-direction: column; */
+}
+#submitForm{
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 86%);
+    border: none;
+}
+
+
+#pronounciation{
+    color:rgb(162, 107, 235);
+}
+.meaningHeader{
+    color:grey;
+}
+.headerAndHori{
+    display:flex;
+    gap:16px;
+}
+
+hr {
+    flex: 1;
+    border: 1px solid hsl(0, 0%, 86%);
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 500;
+    color:black;
+    background-color: hsl(0, 0%, 86%);
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 5px;
+  }
