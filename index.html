@@ -7,12 +7,21 @@
     <title>Dictionary web app</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body class="dark-theme || light-theme">
     <main>
+      <button class="btn-toggle" aria-pressed="false">Toggle Dark Mode  <span aria-hidden="true" class="icon">▼</span></button>
+
+      <button id="fontButton">Difficulty  </button>
+        <div id="fontMenu" role="menu">
+            <button role="menuitem" tabindex="-1">Sans serif </button>
+            <button role="menuitem" tabindex="-1">Serif</button>
+            <button role="menuitem" tabindex="-1">Mono</button>
+        </div>
+
 
     <form id="searchForm">
         <input id="searchInput" type="text" placeholder="Search..">
-        <button id="submitForm" type="submit">🔍 </button>
+        <button id="submitForm" type="submit" aria-pressed="false">🔍</button>
     </form>
 
     <div id="holder">

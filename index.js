@@ -6,6 +6,29 @@ const wordHeader = document.getElementById("wordHeader");
 const pronounciation = document.getElementById("pronounciation"); 
 const searchInput = document.getElementById("searchInput");
 
+const fontButton = document.getElementById("fontButton");
+
+var query="";
+
+fontButton .addEventListener('click', function() {
+    Div=document.getElementById("fontMenu")
+    if (Div.style.display === "block") {
+        Div.style.display = "none";
+      } else {
+        Div.style.display = "block";
+      }
+    
+  })
+
+
+
+const btn = document.querySelector('.btn-toggle');
+btn.addEventListener('click', function() {
+  document.body.classList.toggle('dark-theme');  
+  const currentState = btn.getAttribute('aria-pressed')
+  btn.setAttribute('aria-pressed', currentState === 'false')
+  
+})
 
 
 
@@ -16,7 +39,10 @@ pronounciation.innerText="";
 verbMeaningActual.innerHTML = "";
 nounMeaningActual.innerHTML = "";
 
-var query=searchInput.value;
+if(searchInput.value==""){
+  query="keyboard";
+}else{ query=searchInput.value;}
+
 
 async function getWordDef(){
 let response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${query}`) ;

@@ -1,21 +1,30 @@
 main{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 90%;
+    max-width: 737px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+    padding-bottom: 5.3125rem;
 }
 #searchForm{
     display:flex;
- 
-    /* flex-direction: column; */
 }
 #submitForm{
-    border-radius: 50%;
-    background-color: hsl(0, 0%, 86%);
-    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
 }
+.icon {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+  
+  [aria-pressed=true] .icon {
+    transform: rotate(180deg);
+  } 
 
+
+  #fontMenu{
+      display:none;
+  }
 
 #pronounciation{
     color:rgb(162, 107, 235);
@@ -42,4 +51,15 @@ hr {
     background-color: hsl(0, 0%, 86%);
     border: 1px solid hsl(0, 0%, 86%);
     border-radius: 5px;
+  }
+
+
+
+  /* Dark Mode styles */
+body.dark-theme {
+    color: #eee;
+    background: #121212;
+  }
+  body.dark-theme a {
+    color: #809fff;
   }
