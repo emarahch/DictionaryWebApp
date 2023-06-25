@@ -4,6 +4,13 @@ main{
     padding-inline: 1.5rem;
     padding-bottom: 5.3125rem;
 }
+
+header{
+  display:flex;
+  justify-content: space-between;
+  margin-top:3.25rem;
+  margin-bottom: 3.25rem;
+}
 #searchForm{
     display:flex;
 }
@@ -26,40 +33,63 @@ main{
       display:none;
   }
 
+  #wordHeader{
+    font-size: 4rem;
+  }
+
 #pronounciation{
     color:rgb(162, 107, 235);
+   font-size: 1.5rem;
 }
 .meaningHeader{
     color:grey;
+    font-size:1.25rem;
 }
 .headerAndHori{
     display:flex;
     gap:16px;
 }
 
+#partHeader{
+  font-size:1.5rem;
+  font-style: italic;
+}
+
 hr {
     flex: 1;
+    height: 0px;
     border: 1px solid hsl(0, 0%, 86%);
   }
 
-  input[type="text"] {
+  #searchInput{
     padding: 10px;
     width: 90%;
     font-size: 20px;
     font-weight: 500;
     color:black;
-    background-color: hsl(0, 0%, 86%);
-    border: 1px solid hsl(0, 0%, 86%);
-    border-radius: 5px;
+    background-color: rgba(244, 244, 244);
+    border:none;
+    border-radius: 8px;
+    padding:1.125rem;
   }
 
+  #verbMeaningActual li,
+  #nounMeaningActual li{
+    font-size:1.125rem;
+  }
+ 
 
-
+  
   /* Dark Mode styles */
 body.dark-theme {
+   transition: 0.5s;
     color: #eee;
     background: #121212;
   }
-  body.dark-theme a {
-    color: #809fff;
+
+
+  .dark-theme #searchInput{
+    background-color: rgb(53, 52, 52);
+    color:white;
   }
+

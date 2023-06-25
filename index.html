@@ -7,17 +7,22 @@
     <title>Dictionary web app</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body class="dark-theme || light-theme">
+  <body>
+    <!-- class="dark-theme || light-theme" -->
     <main>
-      <button class="btn-toggle" aria-pressed="false">Toggle Dark Mode  <span aria-hidden="true" class="icon">▼</span></button>
 
+      <header>
+      <img src="/assets/logo.svg">
+      <div>
       <button id="fontButton">Difficulty  </button>
         <div id="fontMenu" role="menu">
             <button role="menuitem" tabindex="-1">Sans serif </button>
             <button role="menuitem" tabindex="-1">Serif</button>
             <button role="menuitem" tabindex="-1">Mono</button>
         </div>
-
+        <button class="btn-toggle" aria-pressed="false">Toggle Dark Mode  <span aria-hidden="true" class="icon">▼</span></button>
+      </div>
+      </header>
 
     <form id="searchForm">
         <input id="searchInput" type="text" placeholder="Search..">
@@ -29,14 +34,14 @@
     <p id="pronounciation"></p>
 
   <div class="headerAndHori">
-    <b id="nounHeader">noun</b> <hr>
+    <b id="partHeader">noun</b> <hr>
   </div>
     <p class="meaningHeader">Meaning</p>
     <div id="nounMeaningActual"></div>
 
 
     <div class="headerAndHori">
-    <b id="verbHeader">verb</b><hr>
+    <b id="partHeader">verb</b><hr>
     </div>
 
     <p class="meaningHeader">Meaning</p>
